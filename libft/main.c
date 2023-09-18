@@ -6,12 +6,12 @@
 /*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:53:05 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/18 16:10:23 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/09/18 16:27:19 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <libft.h>
+#include "libft.h"
 
 int main (void)
 {
