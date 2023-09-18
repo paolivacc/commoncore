@@ -6,7 +6,7 @@
 #    By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/18 12:07:34 by svaccaro          #+#    #+#              #
-#    Updated: 2023/09/18 15:10:45 by svaccaro         ###   ########.fr        #
+#    Updated: 2023/09/18 15:45:52 by svaccaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 ####################ALIAS####################
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 #Compiler
 CC = cc
 #Source files to compile
-SRC = ft_isalpha.c ft_isdigit.c
+SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c
 #Change all .c files to .o files
 OBJS := $(SRC:.c=.o)
 #No ask to remove
