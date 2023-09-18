@@ -1,0 +1,49 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/09/18 12:07:34 by svaccaro          #+#    #+#              #
+#    Updated: 2023/09/18 12:52:59 by svaccaro         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+####################ALIAS####################
+
+#Program's name
+NAME = libft.a
+#Compilation flags
+CFLAGS = -Wall -Wextra -Werror
+#Compiler
+CC = cc
+#Source files to compile
+SRC = isalpha.c
+#Change all .c files to .o files
+OBJS := $(SRC:.c=.o)
+#No ask to remove
+CLEAN = rm -f
+
+####################RULES###################
+#Assign to all, my program libft.a called by $(NAME)
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	ar rcs
+
+%.o:
+	$(CC) $(CFLAGS) -c $(SRC)
+
+bonus:
+
+clean: 
+	$(CLEAN) *.o
+
+fclean:
+	clean $(NAME)
+
+re: fclean all
+
+
+#Tells to command make that this names aren't files
+.PHONY: all clean fclean re
