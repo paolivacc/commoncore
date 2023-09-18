@@ -6,7 +6,7 @@
 #    By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/18 12:07:34 by svaccaro          #+#    #+#              #
-#    Updated: 2023/09/18 12:52:59 by svaccaro         ###   ########.fr        #
+#    Updated: 2023/09/18 15:10:45 by svaccaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 ####################ALIAS####################
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 #Compiler
 CC = cc
 #Source files to compile
-SRC = isalpha.c
+SRC = ft_isalpha.c ft_isdigit.c
 #Change all .c files to .o files
 OBJS := $(SRC:.c=.o)
 #No ask to remove
@@ -29,21 +29,20 @@ CLEAN = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs
+	ar rcs $(NAME) $(OBJS)
 
-%.o:
+$(OBJS):
 	$(CC) $(CFLAGS) -c $(SRC)
 
 bonus:
-
+#
 clean: 
-	$(CLEAN) *.o
-
-fclean:
-	clean $(NAME)
+	$(CLEAN) $(OBJS)
+	
+fclean: clean
+	$(CLEAN) $(NAME)
 
 re: fclean all
-
 
 #Tells to command make that this names aren't files
 .PHONY: all clean fclean re
