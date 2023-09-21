@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:20:47 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/21 18:11:54 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:16:52 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,12 @@ size_t ft_strlen(const char *s);
  * @param b The string to write to.
  * @param c The value to write.
  * @param len The number of bytes to write.
- * @returns The first argument.
 */
 void *ft_memset(void *b, int c, size_t len);
 /**
  * @brief Writes n zeroed bytes to the string s. If n is zero, it does nothing.
- * @param s 
- * @param n 
+ * @param s The string to write to.
+ * @param n The number of bytes to write.
  */
 void ft_bzero(void *s, size_t n);
 /*The memcpy() function copies n bytes from memory area src to memory area dst.  If dst and src overlap, behavior is undefined.  Applications in which dst and src might overlap should use memmove(3) instead.
