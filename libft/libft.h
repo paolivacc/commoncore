@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:20:47 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/20 11:56:02 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/09/21 16:52:25 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,49 @@
 
 #include <string.h>
 
-/*The isalpha() function tests for any character for which isupper(3) or islower(3) is true.  The value of the argument must be representable as an unsigned char or the value of EOF.
-The isalpha() function returns zero if the character tests false and returns non-zero if the character tests true.*/
+/**
+ * @brief Tests if the argument is an alphabetic character.
+ * @param c The character to test.
+ * @returns one if the character is an alphabetic character, zero if not.
+ */
 int ft_isalpha(int c);
-/*The isdigit() function tests for a decimal digit character. Regardless of locale, this includes the following characters only:0123456789
- The isdigit() and isnumber() functions return zero if the character tests false and return non-zero if the character tests true.*/
+/**
+ * @brief Test if the argument is a decimal digit character.
+ * @param c The character to test.
+ * @returns one if the character is a decimal digit character, zero if not.
+*/
 int ft_isdigit(int c);
-/*The isalnum() function tests for any character for which isalpha(3) or isdigit(3) is true.  The value of the argument must be representable as an unsigned char or the value of EOF.
- The isalnum() function returns zero if the character tests false and returns non-zero if the character tests true.*/
+ /**
+  * @brief Test if the argument is an alphanumeric character.
+  * @param c The character to test.
+  * @returns one if the character is true for ft_isalpha or ft_isdigit, zero if not.
+ */
 int ft_isalnum(int c);
-/*The isascii() function tests for an ASCII character, which is any character between 0 and octal 0177 inclusive*/
+/**
+ * @brief Test if the argument is an ASCII character.
+ * @param c The character to test.
+ * @returns one if the character is an ASCII character, zero if not.
+ */
 int ft_isascii(int c);
-/*The isprint() function tests for any printing character, including space (` ').  The value of the argument must be representable as an unsigned char or the value of EOF.
- The isprint() function returns zero if the character tests false and returns non-zero if the character tests true.*/
+/**
+  * @brief Test if the argument is a printable character.
+  * @param c The character to test.
+  * @returns one if the character is a printable character, zero if not.
+ */
 int ft_isprint(int c);
-/*The strlen() function computes the length of the string s.  The strnlen() function attempts to compute the length of s, but never scans beyond the first maxlen bytes of s.
- The strlen() function returns the number of characters that precede the terminating NUL character.  The strnlen() function returns either the same result as strlen() or maxlen, whichever is smaller.*/
+/**
+ * @brief Computes the length of the string s.
+ * @param s The string to compute the length of.
+ * @returns The number of characters that precede the terminating NUL character.
+*/
 size_t ft_strlen(const char *s);
-/*The memset() function writes len bytes of value c (converted to an unsigned char) to the string b. The memset() function returns its first argument.*/
+/**
+ * @brief Writes len bytes of value c (converted to an unsigned char) to the string b.
+ * @param b The string to write to.
+ * @param c The value to write.
+ * @param len The number of bytes to write.
+ * @returns The first argument.
+*/
 void *ft_memset(void *b, int c, size_t len);
 /*The bzero() function writes n zeroed bytes to the string s.  If n is zero, bzero() does nothing.*/
 void ft_bzero(void *s, size_t n);
