@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:20:47 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/22 16:41:10 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/09/23 14:13:58 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int		ft_isprint(int c);
  */
 size_t	ft_strlen(const char *s);
 /**
-* @brief Writes len bytes of value c (converted to an unsigned char) to the string b.
+ * @brief Writes len bytes of value c (converted to an unsigned char) to the string b.
  * @param b The string to write to.
  * @param c The value to write.
  * @param len The number of bytes to write.
@@ -66,19 +66,13 @@ void	*ft_memset(void *b, int c, size_t len);
  * @param n The number of bytes to write.
  */
 void	ft_bzero(void *s, size_t n);
-/*The memcpy() function copies n bytes from memory area src to memory area dst.  If dst and src overlap,
-	behavior is undefined.  Applications in which dst and src might overlap should use memmove(3) instead.
-The	memcpy(void) function returns the original value of dst.*/
 /**
-
-	* @brief The memcpy() function copies n bytes from memory area src to memory area dst.  If dst and src overlap,
-	behavior is undefined.  Applications in which dst and src might overlap should use memmove(3) instead.
- * @param dst
- * @param src
- * @param n
- * @return void*
+ * @brief Copies n bytes from memory area src to memory area dst. If dst and src overlap, behavior is undefined. 
+ * @param dst The string to copy to.
+ * @param src The string to copy from.
+ * @param n The number of bytes to copy.
  */
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 /*The memmove() function copies len bytes from string src to string dst.  The two strings may overlap; the copy is always done in a non-destructive manner.
 The	memmove(void) function returns the original value of dst.*/
 void	*ft_memmove(void *dst, const void *src, size_t len);
@@ -98,8 +92,7 @@ Besides quibbles over the return type (size_t versus int) and signal handler saf
 	the strlcpy() and strlcat() functions return the total length of the string they tried to create.  For strlcpy() that means the length of src.  For strlcat() that means the initial length of dst plus the length of src.
 		If the return value is >= dstsize,
 			the output string has been truncated.  It is the caller's responsibility to handle this.*/
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
-			size_t dstsize);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 /*The strlcpy() and strlcat() functions copy and concatenate strings with the same input parameters and output result as snprintf(3).  They are designed to be safer,
 	more consistent,
 	and less error prone replacements for the easily misused functions strncpy(3) and strncat(3).
@@ -114,8 +107,7 @@ Besides quibbles over the return type (size_t versus int) and signal handler saf
 	the strlcpy() and strlcat() functions return the total length of the string they tried to create.  For strlcpy() that means the length of src.  For strlcat() that means the initial length of dst plus the length of src.
 		If the return value is >= dstsize,
 			the output string has been truncated.  It is the caller's responsibility to handle this.*/
-size_t	ft_strlcat(char *restrict dst, const char *restrict src,
-			size_t dstsize);
+size_t	ft_strlcat(char dst, const char src, size_t dstsize);
 /* The toupper() function converts a lower-case letter to the corresponding upper-case letter.  The argument must be representable as an unsigned char or the value of EOF.
 		Although the toupper() function uses the current locale,
 			the toupper_l() function may be passed a locale directly. See xlocale(3) for more information.
