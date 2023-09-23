@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 10:32:45 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/22 17:21:42 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/09/23 17:21:31 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return (ptr);
 	return (0);
 }
-
-/*int	main(void)
-{
-	char	*c;
-	char	*c1;
-
-	c = strchr("Hola mundo", 108);
-	c1 = ft_strchr("Hola mundo", 108);
-	printf("strchr: %s\n", c);
-	printf("ft_strchr: %s\n", c1);
-}
-*/

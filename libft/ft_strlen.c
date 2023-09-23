@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:20:05 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/22 16:47:12 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/09/23 17:24:39 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,3 @@ size_t	ft_strlen(const char *s)
 		counter++;
 	return (counter);
 }
-
-/*int	main(int argc, char const *argv[])
-{
-	printf("strlen");
-	printf("ft_strlen");
-	return (0);
-}*/
