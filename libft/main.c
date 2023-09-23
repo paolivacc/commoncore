@@ -3,35 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:53:05 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/18 16:27:19 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/09/23 16:45:46 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
 
-int main (void)
+int	main(void)
 {
-	printf("isalpha: %i", isalpha('a'));
-	printf("isalpha: %i", isalpha('A'));
-	printf("isalpha: %i", isalpha('9'));
-	printf("isalpha: %i", isalpha('-'));
-	printf("ft_isalpha: %i");
-	printf("isdigit");
-	printf("ft_isdigit");
-	printf("isalnum");
-	printf("ft_isalnum");
-	printf("isascii");
-	printf("ft_isascii");
-	printf("isprint");
-	printf("ft_isprint");
-	printf("strlen");
-	printf("ft_strlen");
-	printf("memset");
-	printf("ft_memset");
+	char s1[]= "";
+	char s2[]= "";
+	char s3[]= "adios";
+	char s4[]= "adios";
+
+	memcpy(s1, s3,3);
+	ft_memcpy(s2, s4,3);
+	printf("memcpy: %s\n", s1);
+	printf("ft_memcpy: %s\n", s2);
+
 	printf("bzero");
 	printf("ft_bzero");
 	printf("memcpy");
@@ -78,3 +71,4 @@ int main (void)
 	printf("ft_");
 	printf("");
 	printf("ft_");
+}
