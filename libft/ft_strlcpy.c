@@ -14,29 +14,17 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	return ();
+	if (*src)
+	{
+		while (dstsize--)
+			*(dst + dstsize) = *(src + dstsize);
+		++src;
+	}
+//	*(dst + ft_strlen(src)) = '\0';
+
+	return (ft_strlen(src) + 1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	size_t i;
+/*	size_t i;
 	size_t length;
 
 	i = 0;
@@ -50,4 +38,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	return (length);
-}
+}*/

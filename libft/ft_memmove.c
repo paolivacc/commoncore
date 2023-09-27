@@ -20,7 +20,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (src < dst)
 		ft_memcpy(dst, src, len);
 	else
-	{	
+	{
 		if (!dst && !src)
 			return (0);
 		while (i < len)

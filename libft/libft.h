@@ -71,10 +71,15 @@ void	ft_bzero(void *s, size_t n);
  * @param dst The string to copy to.
  * @param src The string to copy from.
  * @param n The number of bytes to copy.
+ * @returns The original value of dst.
  */
 void	*ft_memcpy(void *dst, const void *src, size_t n);
-/*The memmove() function copies len bytes from string src to string dst.  The two strings may overlap; the copy is always done in a non-destructive manner.
-The	memmove(void) function returns the original value of dst.*/
+/**
+ * @brief Copies len bytes from string src to string dst. The two strings may overlap; the copy is always done in a non-destrucive manner.
+ * @param dst The string to copy to.
+ * @param src The string to copy from.
+ * @returns The original value of dst.
+ */
 void	*ft_memmove(void *dst, const void *src, size_t len);
 /*The strlcpy() and strlcat() functions copy and concatenate strings with the same input parameters and output result as snprintf(3).  They are designed to be safer, more consistent, and less error prone replacements for the easily misused functions strncpy(3) and strncat(3).
  * strlcpy() and strlcat() take the full size of the destination buffer and guarantee NUL-termination if there is room.  Note that room for the NUL should be included in dstsize.
@@ -89,7 +94,7 @@ Besides quibbles over the return type (size_t versus int) and signal handler saf
  Like snprintf(3), the strlcpy() and strlcat() functions return the total length of the string they tried to create.  For strlcpy() that means the length of src. For strlcat() that means the initial length of dst plus the length of src.
 		If the return value is >= dstsize,the output string has been truncated.  It is the caller's responsibility to handle this.*/
 /**
- * @brief Copy and concatenate strings with the same input parameters and output result as 
+ * @brief Copy the string src to the string dst and guarantee to NUL-terminate the result.
  * @param dst
  * @param src
  * @param dstsize
