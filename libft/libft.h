@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:20:47 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/24 00:58:32 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:17:07 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,44 +78,26 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
  * @brief Copies len bytes from string src to string dst. The two strings may overlap; the copy is always done in a non-destrucive manner.
  * @param dst The string to copy to.
  * @param src The string to copy from.
+ * @param len The number of bytes to copy.
  * @returns The original value of dst.
  */
 void	*ft_memmove(void *dst, const void *src, size_t len);
-/*The strlcpy() and strlcat() functions copy and concatenate strings with the same input parameters and output result as snprintf(3).  They are designed to be safer, more consistent, and less error prone replacements for the easily misused functions strncpy(3) and strncat(3).
- * strlcpy() and strlcat() take the full size of the destination buffer and guarantee NUL-termination if there is room.  Note that room for the NUL should be included in dstsize.
-		strlcpy() copies up to dstsize
-			- 1 characters from the string src to dst,
-			NUL-terminating the result if dstsize is not 0.
-		If the src and dst strings overlap, the behavior is undefined.
-Besides quibbles over the return type (size_t versus int) and signal handler safety (snprintf(3) is not entirely safe on some systems),
-	the following two are equivalent:
-			n = strlcpy(dst, src, len);
-			n = snprintf(dst, len, "%s", src);
- Like snprintf(3), the strlcpy() and strlcat() functions return the total length of the string they tried to create.  For strlcpy() that means the length of src. For strlcat() that means the initial length of dst plus the length of src.
-		If the return value is >= dstsize,the output string has been truncated.  It is the caller's responsibility to handle this.*/
 /**
- * @brief Copy the string src to the string dst and guarantee to NUL-terminate the result.
- * @param dst
- * @param src
- * @param dstsize
- * @returs 
+ * @brief Copy up to dstsize - 1 characters from string src to the string dst guaranteeing NULL-terminate character if dstsize is not 0. If the src and dst strings overlap, the behaivor is undefined. 
+ * @param dst The string to copy to.
+ * @param src The string to copy from.
+ * @param dstsize The number of bytes to copy, whith the guarantee of NULL-terminate.
+ * @returns The total length of src.
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-/*The strlcpy() and strlcat() functions copy and concatenate strings with the same input parameters and output result as snprintf(3).  They are designed to be safer,
-	more consistent,
-	and less error prone replacements for the easily misused functions strncpy(3) and strncat(3).
-		strlcat() appends string src to the end of dst.  It will append at most dstsize
-			- strlen(dst) - 1 characters.  It will then NUL-terminate,
-			unless dstsize is 0 or the original dst string was longer than dstsize (in practice this should not happen as it means that either dstsize is incorrect or that dst is not a proper string).
-Besides quibbles over the return type (size_t versus int) and signal handler safety (snprintf(3) is not entirely safe on some systems),
-	the following two are equivalent:
-			n = strlcpy(dst, src, len);
-			n = snprintf(dst, len, "%s", src);
- Like snprintf(3),
-	the strlcpy() and strlcat() functions return the total length of the string they tried to create.  For strlcpy() that means the length of src.  For strlcat() that means the initial length of dst plus the length of src.
-		If the return value is >= dstsize,
-			the output string has been truncated.  It is the caller's responsibility to handle this.*/
-size_t	ft_strlcat(char dst, const char src, size_t dstsize);
+/**
+ * @brief Appends the NULL-terminated string src to the end of dst. It will append at most dstsize - strlen(dst) - 1 bytes, NULL-terminating the result. If the src and dst string overlap, the behavior is undefined. 
+ * @param dst The string to copy to.
+ * @param src The string to copy from.
+ * @param dstsize The number of bytes to copy, whith the guarantee of NULL-terminate.
+ * @returns The initial length of dst plus the length of src.
+ */
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 /* The toupper() function converts a lower-case letter to the corresponding upper-case letter.  The argument must be representable as an unsigned char or the value of EOF.
 		Although the toupper() function uses the current locale,
 			the toupper_l() function may be passed a locale directly. See xlocale(3) for more information.
