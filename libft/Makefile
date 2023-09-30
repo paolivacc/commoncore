@@ -6,7 +6,7 @@
 #    By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/18 12:07:34 by svaccaro          #+#    #+#              #
-#    Updated: 2023/09/24 00:07:15 by svaccaro         ###   ########.fr        #
+#    Updated: 2023/09/30 17:32:36 by svaccaro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,9 @@ CC = cc
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c
 SRC_ADD = ft_substr.c ft_strjoin ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 SRC_BONUS = ft_lstnew.c ft_lstadd_fornt.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+SRC_MINE = ft_strcpy.c
 #Change all .c files to .o files
-OBJS = $(SRC:.c=.o)
+OBJS = $(SRC:.c=.o) $(SRC_MINE:.c=.o)
 #No ask to remove
 CLEAN = rm -f
 
@@ -36,7 +37,7 @@ $(NAME): 	$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 $(OBJS):
-	$(CC) $(CFLAGS) -c $(SRC)
+	$(CC) $(CFLAGS) -c $(SRC) $(SRC_MINE)
 
 #bonus:
 #

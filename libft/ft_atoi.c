@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 16:33:11 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/29 17:03:57 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/09/30 14:54:22 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_atoi(const char *str)
 	int	counter_sign;
 	int	number;
 	int	i;
-	int neg;
+	int	neg;
 
 	counter_sign = 0;
 	number = 0;
@@ -28,7 +28,7 @@ int	ft_atoi(const char *str)
 	while (*(str + i) == '-' || *(str + i) == '+' )
 	{	
 		++counter_sign;
-		if(counter_sign > 1)
+		if (counter_sign > 1)
 			return (0);
 		if (*(str + i) == '-')
 			++neg;

@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:20:47 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/29 11:17:07 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/09/30 17:27:49 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdio.h>
+# include <stdlib.h>
 # include <string.h>
 
 /**
@@ -183,4 +184,6 @@ void	*ft_calloc(size_t count, size_t size);
 		NULL is returned and errno is set to ENOMEM.
 */
 char	*ft_strdup(const char *s1);
+/**Descripción aquí*/
+char	*ft_strcpy(char *dest, const char *src);
 #endif /*LIBFT_H*/
