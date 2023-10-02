@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 15:09:04 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/01 16:50:10 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/02 15:08:33 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (j == length && needle[j] == '\0')
 		return ((char *)haystack + i - j);
 	return (0);
-}
-
-int main ()
-{
-	printf("ft: %s\n", ft_strnstr("FF", "see F your F return F now F", -1));
-	printf("original: %s\n", strnstr("FF", "see F your F return F now F", -1));
 }
