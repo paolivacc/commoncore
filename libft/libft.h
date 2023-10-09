@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:20:47 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/02 15:07:52 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/04 14:22:41 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -313,4 +313,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /**Descripción aquí*/
 char	*ft_strcpy(char *dest, const char *src);
+size_t	ft_wordcounter(const char *s, char c);
 #endif /*LIBFT_H*/
