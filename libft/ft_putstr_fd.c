@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:48:21 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/09 12:49:55 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/11 11:11:58 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, sizeof(ft_strlen(s)+1));
+	write(fd, s, ft_strlen(s));
 }

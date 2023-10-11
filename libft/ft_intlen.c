@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_wordcounter.c                                   :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 13:27:11 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/09 13:23:26 by svaccaro         ###   ########.fr       */
+/*   Created: 2023/10/11 16:27:12 by svaccaro          #+#    #+#             */
+/*   Updated: 2023/10/11 16:36:04 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_wordcounter(const char *s, char c)
+size_t	ft_intlen(int n)
 {
-	size_t	cnt;
-	size_t	i;
+	size_t	len;
 
-	i = 0;
-	cnt = 0;
-	while (*(s + i) && *(s + i) == c)
-		i++;
-	while (*(s + i))
+	len = 0;
+	if (n <= 0)
 	{
-		if (*(s + i) == c && *(s + i - 1) != c)
-			cnt++;
-		i++;
+		len++;
+		n = -n;
 	}
-	return (cnt);
+	while (n)
+	{
+		n = (n / 10);
+		len++;
+	}
+	return (len);
 }
