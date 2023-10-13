@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:20:47 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/11 17:10:31 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/12 13:20:35 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,7 +219,7 @@ char	*ft_strdup(const char *s1);
  * @param len The maximum length of the substring.
  * @return NULL if the allocation fails, a pointer to the substring if there is.
  */
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
 /**
  * @brief Allocates with malloc and returns a new string, 
  * which is the result of the concatenation of s1 and s2.
@@ -227,7 +227,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
  * @param s2 The suffix string.
  * @return The new string. NULL if the allocation fails.
  */
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(const char *s1, char const *s2);
 /**
  * @brief Allocates with malloc and returns a copy of the s1 with the characters
  * specified in set removed from the beginning and the end of the string.
@@ -235,7 +235,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
  * @param set The reference set of characters to trim.
  * @return The trimmed string. NULL if the allocation fails.
  */
-char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strtrim(const char *s1, char const *set);
 /**
  * @brief Allocates with malloc and returns an array of strings obtained 
  * by splitting s using the character c as a delimiter. 
@@ -245,7 +245,7 @@ char	*ft_strtrim(char const *s1, char const *set);
  * @return The array of new strings resulting from the split. 
  * NULL if the allocation fails.
  */
-char	**ft_split(char const *s, char c);
+char	**ft_split(const char *s, char c);
 /**
  * @brief Allocates with malloc and returns a string representing the integer 
  * received as an argument. Negative numbers must be handled.
@@ -262,7 +262,7 @@ char	*ft_itoa(int n);
  * @return The string created from the successive applications of f. 
  * NULL if the allocation fails.
  */
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 /**
  * @brief Applies the function f to each character of the string passed 
  * as argument, passing its index as first argument. 
