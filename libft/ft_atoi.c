@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 16:33:11 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/11 13:29:52 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/15 19:46:53 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	set_var(int *counter_sign, int *number, int *i)
+static void	set_var(int *counter_sign, int *number, int *i)
 {
 	*counter_sign = 0;
 	*number = 0;
 	*i = 0;
 }
 
-void	check_sign(const char *str, int *counter_sign, int *i)
+static void	check_sign(const char *str, int *counter_sign, int *i)
 {
 	if (*(str + *i) == '-')
 		++(*counter_sign);

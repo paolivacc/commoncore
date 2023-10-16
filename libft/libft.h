@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:20:47 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/12 13:20:35 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/15 20:03:56 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -362,9 +362,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
  * element if needed.
  * @return The new list. NULL if the allocation fails.
  */
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-/**Descripción aquí*/
-char	*ft_strcpy(char *dest, const char *src);
-size_t	ft_wordcounter(const char *s, char c);
-size_t	ft_intlen(int n);
 #endif /*LIBFT_H*/

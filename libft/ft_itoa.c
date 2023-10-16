@@ -3,14 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 14:07:25 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/11 17:36:52 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/15 19:55:23 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	ft_intlen(int n)
+{
+	size_t	len;
+
+	len = 0;
+	if (n <= 0)
+	{
+		len++;
+		n = -n;
+	}
+	while (n)
+	{
+		n = (n / 10);
+		len++;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {

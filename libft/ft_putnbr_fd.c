@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:53:05 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/10/12 19:46:36 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/15 19:49:37 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ void	ft_putnbr_fd(int n, int fd)
 	char	c;
 
 	if (n == INT_MIN)
-	{	
 		ft_putstr_fd("-2147483648", fd);
-	}
 	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
