@@ -6,7 +6,7 @@
 /*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:20:05 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/23 17:24:39 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/16 15:40:41 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	counter;
+	size_t	cnt;
 
-	counter = 0;
-	while (s[counter] != '\0')
-		counter++;
-	return (counter);
+	cnt = 0;
+	while (s[cnt] != '\0')
+		cnt++;
+	return (cnt);
 }

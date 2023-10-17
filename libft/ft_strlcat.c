@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 00:53:38 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/29 13:21:33 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:07:43 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		++i;
 	}
 	dst[dstlen + i] = '\0';
-	return (dstlen + ft_strlen(src));
+	return (ft_strlen(src) + dstlen);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svaccaro <svaccaro@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: svaccaro <svaccaro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 15:34:55 by svaccaro          #+#    #+#             */
-/*   Updated: 2023/09/29 16:26:20 by svaccaro         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:11:29 by svaccaro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strrchr(const char *s, int c)
 			return (ptr + slen);
 		slen--;
 	}
-	return (0);
+	return (NULL);
 }
